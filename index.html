@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>単語帳</title>
+    <style>
+        .flashcard {
+            border: 1px solid #000;
+            padding: 20px;
+            margin: 10px;
+            display: none;
+        }
+        .visible {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div id="genre-selection">
+        <h1>ジャンルを選択してください</h1>
+        <button onclick="selectGenre('no1.json')">企業活動</button>
+        <button onclick="selectGenre('no2.json')">法務</button>
+        <button onclick="selectGenre('no3.json')">経営戦略マネジメント</button>
+        <button onclick="selectGenre('no4.json')">技術戦略マネジメント</button>
+        <button onclick="selectGenre('no5.json')">システム戦略</button>
+    </div>
+    <div id="flashcards-container"></div>
+    <button id="next-button" style="display:none;" onclick="showNextFlashcard()">次へ</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
