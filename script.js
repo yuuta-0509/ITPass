@@ -44,7 +44,16 @@ function checkAnswer() {
         resultMessage.appendChild(nextButton);
     } else {
         resultMessage.innerHTML = '不正解。もう一度試してください。';
+        const revealButton = document.createElement('button');
+        revealButton.innerText = '答えを表示する';
+        revealButton.onclick = () => revealAnswer(correctAnswer);
+        resultMessage.appendChild(revealButton);
     }
+}
+
+function revealAnswer(answer) {
+    const resultMessage = document.getElementById('result-message');
+    resultMessage.innerHTML += `<br>答え: ${answer}`;
 }
 
 function showNextFlashcard() {
